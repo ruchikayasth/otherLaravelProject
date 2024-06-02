@@ -16,6 +16,8 @@ class AuthController extends Controller
             'password' => 'required|string|confirmed'
         ]);
 
+        echo "<pre>";print_r($request->all());die;
+
         $user = User::create([
             'name' => $fields['name'],
             'email' => $fields['email'],
